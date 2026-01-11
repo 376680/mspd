@@ -58,6 +58,7 @@
                         <a href="news.html">活动日历</a>
                     </div>
                 </div>
+                <a href="achievements.html">警务成果</a>
                 <a href="contact.html" class="contact-btn">联系</a>
                 <button class="search-btn"><i class="fas fa-search"></i></button>
             </div>
@@ -74,13 +75,56 @@
                 <div class="card">
                     <h3>犯罪统计</h3>
                     <p>以下是小鼠帝国最近一年的犯罪统计数据：</p>
-                    <ul style="margin-left: 20px; margin-bottom: 15px;">
-                        <li><strong>奶酪盗窃案：</strong>1,234 起（同比下降 5%）</li>
-                        <li><strong>鼠洞破坏案：</strong>876 起（同比上升 2%）</li>
-                        <li><strong>夜间噪音扰民：</strong>567 起（同比下降 10%）</li>
-                        <li><strong>卢昱书相关事件：</strong>345 起（同比上升 8%）</li>
-                        <li><strong>文件盗窃案：</strong>234 起（同比下降 15%）</li>
-                    </ul>
+                    <div style="overflow-x: auto; margin: 20px 0;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background-color: #003366; color: white;">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">犯罪类型</th>
+                                    <th style="padding: 12px; text-align: right; border: 1px solid #ddd;">案件数量</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">同比变化</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background-color: #f9f9f9;">
+                                    <td style="padding: 12px; border: 1px solid #ddd;">奶酪盗窃案</td>
+                                    <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">1,234</td>
+                                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; color: #008000;">↓ 5%</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #ddd;">鼠洞破坏案</td>
+                                    <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">876</td>
+                                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; color: #cc0000;">↑ 2%</td>
+                                </tr>
+                                <tr style="background-color: #f9f9f9;">
+                                    <td style="padding: 12px; border: 1px solid #ddd;">夜间噪音扰民</td>
+                                    <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">567</td>
+                                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; color: #008000;">↓ 10%</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #ddd;">卢昱书相关事件</td>
+                                    <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">345</td>
+                                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; color: #cc0000;">↑ 8%</td>
+                                </tr>
+                                <tr style="background-color: #f9f9f9;">
+                                    <td style="padding: 12px; border: 1px solid #ddd;">文件盗窃案</td>
+                                    <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">234</td>
+                                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; color: #008000;">↓ 15%</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #ddd;">其他犯罪</td>
+                                    <td style="padding: 12px; text-align: right; border: 1px solid #ddd;">456</td>
+                                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; color: #008000;">↓ 3%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background-color: #e8f4f8;">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">总计</th>
+                                    <th style="padding: 12px; text-align: right; border: 1px solid #ddd;">3,672</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">↓ 2%</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                     <p><strong>犯罪高发区域：</strong></p>
                     <ul style="margin-left: 20px;">
                         <li>小鼠帝国东部区域（奶酪盗窃案高发）</li>
@@ -92,22 +136,67 @@
                 <div class="card">
                     <h3>犯罪预防</h3>
                     <p>以下是一些有效的犯罪预防措施，帮助您保护自己和财产：</p>
-                    <ul style="margin-left: 20px; margin-bottom: 15px;">
-                        <li><strong>奶酪安全：</strong>将奶酪储存在密封容器中，定期检查储存设施的安全性</li>
-                        <li><strong>鼠洞安全：</strong>加固鼠洞入口，安装防盗装置，定期检查鼠洞结构</li>
-                        <li><strong>夜间安全：</strong>避免夜间单独外出，使用安全通道，关闭鼠洞入口</li>
-                        <li><strong>卢昱书防范：</strong>安装卢昱书预警系统，了解卢昱书的活动规律，避免危险区域</li>
-                        <li><strong>文件安全：</strong>重要文件（如数学专题八复习卷）应妥善保管，避免泄露</li>
-                    </ul>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                        <div style="background-color: #e8f4f8; padding: 15px; border-radius: 5px;">
+                            <h4 style="color: #003366; margin-bottom: 10px;">奶酪安全</h4>
+                            <ul style="margin-left: 20px;">
+                                <li>将奶酪储存在密封容器中</li>
+                                <li>定期检查储存设施的安全性</li>
+                                <li>避免在公共场合炫耀奶酪</li>
+                                <li>考虑购买奶酪保险</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #e8f4f8; padding: 15px; border-radius: 5px;">
+                            <h4 style="color: #003366; margin-bottom: 10px;">鼠洞安全</h4>
+                            <ul style="margin-left: 20px;">
+                                <li>加固鼠洞入口</li>
+                                <li>安装防盗装置</li>
+                                <li>定期检查鼠洞结构</li>
+                                <li>避免在鼠洞内存放大量奶酪</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #e8f4f8; padding: 15px; border-radius: 5px;">
+                            <h4 style="color: #003366; margin-bottom: 10px;">夜间安全</h4>
+                            <ul style="margin-left: 20px;">
+                                <li>避免夜间单独外出</li>
+                                <li>使用安全通道</li>
+                                <li>关闭鼠洞入口</li>
+                                <li>保持通讯设备畅通</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #e8f4f8; padding: 15px; border-radius: 5px;">
+                            <h4 style="color: #003366; margin-bottom: 10px;">卢昱书防范</h4>
+                            <ul style="margin-left: 20px;">
+                                <li>安装卢昱书预警系统</li>
+                                <li>了解卢昱书的活动规律</li>
+                                <li>避免危险区域</li>
+                                <li>参加卢昱书防范培训</li>
+                            </ul>
+                        </div>
+                    </div>
                     <p>我们建议所有鼠民参加我们的小鼠安全培训，学习更多有效的犯罪预防技巧。</p>
                 </div>
 
                 <div class="card">
                     <h3>犯罪报告</h3>
                     <p>如果您成为犯罪受害者或目睹了犯罪行为，请立即报告：</p>
-                    <p><strong>紧急情况：</strong>拨打 1-800-CHEESE-1</p>
-                    <p><strong>非紧急情况：</strong>联系当地分局或在线提交报告</p>
-                    <p><strong>匿名举报：</strong>通过小鼠帝国犯罪举报中心在线提交匿名线索</p>
+                    <div style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                        <h4 style="color: #856404; margin-bottom: 10px;">紧急情况</h4>
+                        <p style="color: #856404;">如果您遇到紧急情况，请立即拨打 <span style="font-weight: bold;">1-800-CHEESE-1</span>，我们的接线员将立即为您提供帮助。</p>
+                    </div>
+                    <div style="background-color: #d1ecf1; border: 1px solid #bee5eb; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                        <h4 style="color: #0c5460; margin-bottom: 10px;">非紧急情况</h4>
+                        <p style="color: #0c5460;">对于非紧急情况，您可以通过以下方式报告：</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>联系当地分局</li>
+                            <li>在线提交报告</li>
+                            <li>邮寄报告</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                        <h4 style="color: #155724; margin-bottom: 10px;">匿名举报</h4>
+                        <p style="color: #155724;">如果您希望匿名举报，可以通过小鼠帝国犯罪举报中心在线提交匿名线索，我们将对您的身份严格保密。</p>
+                    </div>
                     <p><strong>报告内容：</strong></p>
                     <ul style="margin-left: 20px;">
                         <li>犯罪发生的时间和地点</li>
@@ -116,6 +205,19 @@
                         <li>任何可能的证据或证人</li>
                     </ul>
                 </div>
+            </div>
+            
+            <!-- 新增板块：犯罪趋势分析 -->
+            <div style="margin-top: 50px; background-color: #e8f4f8; padding: 30px; border-radius: 5px;">
+                <h3 style="color: #003366; margin-bottom: 20px;">犯罪趋势分析</h3>
+                <p>根据我们的统计数据，小鼠帝国的犯罪率总体呈下降趋势，但仍有一些需要关注的问题：</p>
+                <ul style="margin-left: 20px; margin: 15px 0;">
+                    <li>奶酪盗窃案虽然有所下降，但仍然是最常见的犯罪类型</li>
+                    <li>卢昱书相关事件呈上升趋势，需要加强防范措施</li>
+                    <li>夜间噪音扰民案件大幅下降，说明我们的社区介入工作取得了成效</li>
+                    <li>文件盗窃案下降明显，可能与我们的文件安全宣传有关</li>
+                </ul>
+                <p>我们将继续加强犯罪预防工作，提高鼠民的安全意识，确保小鼠帝国的安全和稳定。</p>
             </div>
         </div>
     </section>

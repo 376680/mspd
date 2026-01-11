@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>警务成果 - 小鼠帝国警务署</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="生成特定图片.png" alt="小鼠帝国警务署标志" width="100" height="100">
+                </div>
+                <div class="agency-name">
+                    <h1>小鼠帝国警务署</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务</a></li>
+                        <li><a href="crime.html">犯罪信息</a></li>
+                        <li><a href="intervention.html">干预计划</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="most-wanted.html">头号通缉犯</a></li>
+                        <li><a href="achievements.html">警务成果</a></li>
+                        <li><a href="contact.html" class="contact-btn">联系我们</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="achievements-section">
+                <h2>警务成果</h2>
+                <p>小鼠帝国警务署致力于维护社区安全，打击犯罪，保护鼠民生命财产安全。以下是我们近期的工作成果：</p>
+
+                <div class="charts-container">
+                    <div class="chart-item">
+                        <h3>近期抓获犯罪嫌疑人数量</h3>
+                        <div class="chart" id="suspectsChart"></div>
+                    </div>
+
+                    <div class="chart-item">
+                        <h3>找回被盗奶酪总重量</h3>
+                        <div class="chart" id="cheeseChart"></div>
+                    </div>
+
+                    <div class="chart-item">
+                        <h3>安全培训参与人数</h3>
+                        <div class="chart" id="trainingChart"></div>
+                    </div>
+
+                    <div class="chart-item">
+                        <h3>鼠洞破坏案件下降比例</h3>
+                        <div class="chart" id="crimeRateChart"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="download-links">
+                <h2>资源下载</h2>
+                <div class="download-item">
+                    <a href="#" class="download-btn">小鼠帝国警务署武力使用政策（修订版）.pdf</a>
+                    <p>提供小鼠帝国警务署武力使用政策的最新修订版，方便鼠民了解和保存。</p>
+                </div>
+            </section>
+
+            <section class="friendship-links">
+                <h2>友情链接</h2>
+                <div class="links-container">
+                    <a href="https://376680.github.io/UMKGOV/" class="friend-link" target="_blank">小鼠帝国政府网</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>除另有说明外，所有内容均根据开放政府许可协议v3.0提供。</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // 简单图表实现
+        document.addEventListener('DOMContentLoaded', function() {
+            drawCharts();
+        });
+
+        function drawCharts() {
+            // 近期抓获犯罪嫌疑人数量
+            drawBarChart('suspectsChart', [12, 19, 15, 22, 18], ['1月', '2月', '3月', '4月', '5月'], '数量');
+            
+            // 找回被盗奶酪总重量
+            drawPieChart('cheeseChart', [35, 25, 20, 20], ['奶酪块', '奶酪片', '奶酪粉', '其他'], '重量占比');
+            
+            // 安全培训参与人数
+            drawBarChart('trainingChart', [58, 72, 89, 65, 92], ['1月', '2月', '3月', '4月', '5月'], '人数');
+            
+            // 鼠洞破坏案件下降比例
+            drawLineChart('crimeRateChart', [100, 85, 72, 60, 45], ['1月', '2月', '3月', '4月', '5月'], '案件数量');
+        }
+
+        function drawBarChart(containerId, data, labels, unit) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            const maxValue = Math.max(...data);
+            const chartHeight = 200;
+            const chartWidth = 300;
+            const barWidth = chartWidth / data.length - 10;
+            
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', chartWidth);
+            svg.setAttribute('height', chartHeight + 50);
+            
+            data.forEach((value, index) => {
+                const barHeight = (value / maxValue) * chartHeight;
+                const x = index * (chartWidth / data.length) + 5;
+                const y = chartHeight - barHeight;
+                
+                const bar = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                bar.setAttribute('x', x);
+                bar.setAttribute('y', y);
+                bar.setAttribute('width', barWidth);
+                bar.setAttribute('height', barHeight);
+                bar.setAttribute('fill', '#003366');
+                bar.setAttribute('rx', '2');
+                
+                bar.addEventListener('mouseover', function() {
+                    this.setAttribute('fill', '#ff6600');
+                });
+                
+                bar.addEventListener('mouseout', function() {
+                    this.setAttribute('fill', '#003366');
+                });
+                
+                svg.appendChild(bar);
+                
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', x + barWidth / 2);
+                text.setAttribute('y', y - 5);
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('fill', '#333');
+                text.setAttribute('font-size', '12');
+                text.textContent = value;
+                svg.appendChild(text);
+                
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('x', x + barWidth / 2);
+                label.setAttribute('y', chartHeight + 15);
+                label.setAttribute('text-anchor', 'middle');
+                label.setAttribute('fill', '#333');
+                label.setAttribute('font-size', '12');
+                label.textContent = labels[index];
+                svg.appendChild(label);
+            });
+            
+            container.appendChild(svg);
+        }
+
+        function drawPieChart(containerId, data, labels, title) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            const width = 300;
+            const height = 300;
+            const radius = Math.min(width, height) / 2 - 20;
+            
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            
+            const centerX = width / 2;
+            const centerY = height / 2;
+            
+            const total = data.reduce((sum, value) => sum + value, 0);
+            let currentAngle = 0;
+            const colors = ['#003366', '#0055a5', '#ffcc00', '#ff6600'];
+            
+            data.forEach((value, index) => {
+                const sliceAngle = (value / total) * 2 * Math.PI;
+                const startX = centerX + radius * Math.cos(currentAngle);
+                const startY = centerY + radius * Math.sin(currentAngle);
+                const endX = centerX + radius * Math.cos(currentAngle + sliceAngle);
+                const endY = centerY + radius * Math.sin(currentAngle + sliceAngle);
+                const largeArcFlag = sliceAngle > Math.PI ? 1 : 0;
+                
+                const pathData = [
+                    `M ${centerX} ${centerY}`,
+                    `L ${startX} ${startY}`,
+                    `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY}`,
+                    'Z'
+                ].join(' ');
+                
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', pathData);
+                path.setAttribute('fill', colors[index % colors.length]);
+                
+                path.addEventListener('mouseover', function() {
+                    this.setAttribute('opacity', '0.8');
+                });
+                
+                path.addEventListener('mouseout', function() {
+                    this.setAttribute('opacity', '1');
+                });
+                
+                svg.appendChild(path);
+                
+                // 添加图例
+                const legendX = width - 120;
+                const legendY = 50 + index * 25;
+                
+                const legendBox = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                legendBox.setAttribute('x', legendX);
+                legendBox.setAttribute('y', legendY);
+                legendBox.setAttribute('width', '15');
+                legendBox.setAttribute('height', '15');
+                legendBox.setAttribute('fill', colors[index % colors.length]);
+                svg.appendChild(legendBox);
+                
+                const legendText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                legendText.setAttribute('x', legendX + 25);
+                legendText.setAttribute('y', legendY + 12);
+                legendText.setAttribute('fill', '#333');
+                legendText.setAttribute('font-size', '12');
+                legendText.textContent = `${labels[index]}: ${value}%`;
+                svg.appendChild(legendText);
+                
+                currentAngle += sliceAngle;
+            });
+            
+            container.appendChild(svg);
+        }
+
+        function drawLineChart(containerId, data, labels, unit) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            const width = 300;
+            const height = 200;
+            const padding = 20;
+            
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height + 50);
+            
+            const chartWidth = width - 2 * padding;
+            const chartHeight = height - 2 * padding;
+            
+            const maxValue = Math.max(...data);
+            const minValue = Math.min(...data);
+            
+            // 绘制坐标轴
+            const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            xAxis.setAttribute('x1', padding);
+            xAxis.setAttribute('y1', padding + chartHeight);
+            xAxis.setAttribute('x2', padding + chartWidth);
+            xAxis.setAttribute('y2', padding + chartHeight);
+            xAxis.setAttribute('stroke', '#333');
+            svg.appendChild(xAxis);
+            
+            const yAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            yAxis.setAttribute('x1', padding);
+            yAxis.setAttribute('y1', padding);
+            yAxis.setAttribute('x2', padding);
+            yAxis.setAttribute('y2', padding + chartHeight);
+            yAxis.setAttribute('stroke', '#333');
+            svg.appendChild(yAxis);
+            
+            // 绘制数据线
+            let pathData = `M ${padding} ${padding + chartHeight - ((data[0] - minValue) / (maxValue - minValue)) * chartHeight}`;
+            
+            data.forEach((value, index) => {
+                if (index > 0) {
+                    const x = padding + (index / (data.length - 1)) * chartWidth;
+                    const y = padding + chartHeight - ((value - minValue) / (maxValue - minValue)) * chartHeight;
+                    pathData += ` L ${x} ${y}`;
+                }
+            });
+            
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            line.setAttribute('d', pathData);
+            line.setAttribute('fill', 'none');
+            line.setAttribute('stroke', '#003366');
+            line.setAttribute('stroke-width', '2');
+            svg.appendChild(line);
+            
+            // 绘制数据点
+            data.forEach((value, index) => {
+                const x = padding + (index / (data.length - 1)) * chartWidth;
+                const y = padding + chartHeight - ((value - minValue) / (maxValue - minValue)) * chartHeight;
+                
+                const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                dot.setAttribute('cx', x);
+                dot.setAttribute('cy', y);
+                dot.setAttribute('r', '4');
+                dot.setAttribute('fill', '#ff6600');
+                
+                dot.addEventListener('mouseover', function() {
+                    this.setAttribute('r', '6');
+                });
+                
+                dot.addEventListener('mouseout', function() {
+                    this.setAttribute('r', '4');
+                });
+                
+                svg.appendChild(dot);
+                
+                // 添加标签
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('x', x);
+                label.setAttribute('y', padding + chartHeight + 15);
+                label.setAttribute('text-anchor', 'middle');
+                label.setAttribute('fill', '#333');
+                label.setAttribute('font-size', '12');
+                label.textContent = labels[index];
+                svg.appendChild(label);
+            });
+            
+            container.appendChild(svg);
+        }
+    </script>
+</body>
+</html>
