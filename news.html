@@ -68,7 +68,13 @@
     <!-- 内容区域 -->
     <section class="content">
         <div class="container">
-            <h2>消息</h2>
+            <!-- 面包屑导航 -->
+            <div class="breadcrumb" style="margin: 20px 0; font-size: 14px; color: #666;">
+                <a href="index.html" style="color: #003366; text-decoration: none;">首页</a> → 
+                <span style="color: #003366; font-weight: bold;">新闻与公告</span>
+            </div>
+            
+            <h2>新闻与公告</h2>
             <p>小鼠帝国警务署提供最新的公告、新闻发布和活动日历，让您及时了解我们的工作动态和重要信息。</p>
 
             <div class="grid">
@@ -170,6 +176,42 @@
         </div>
     </footer>
 
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" id="backToTop">↑</div>
+    
+    <!-- 警灯效果 -->
+    <div class="police-light"></div>
+    
     <script src="js/script.js"></script>
+    <script>
+        // 回到顶部按钮功能
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 当前页面导航高亮
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-links > a');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('current');
+            }
+        });
+    </script>
 </body>
 </html>

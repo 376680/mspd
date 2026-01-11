@@ -68,21 +68,30 @@
     <!-- 通缉犯详情页面内容 -->
     <div class="container">
         <div class="content">
+            <!-- 面包屑导航 -->
+            <div class="breadcrumb" style="margin: 20px 0; font-size: 14px; color: #666;">
+                <a href="index.html" style="color: #003366; text-decoration: none;">首页</a> → 
+                <a href="crime.html" style="color: #003366; text-decoration: none;">犯罪信息</a> → 
+                <a href="most-wanted.html" style="color: #003366; text-decoration: none;">头号通缉犯</a> → 
+                <span style="color: #003366; font-weight: bold;">未知</span>
+            </div>
+            
             <h2>头号通缉犯</h2>
-            <h1>未知</h1>
+            <h1>未知鼠员</h1>
             
             <div style="display: flex; gap: 40px; margin-top: 30px;">
                 <!-- 通缉犯照片 -->
                 <div style="width: 250px;">
-                    <img src="生成特定图片.png" alt="未知" style="width: 100%; height: auto; border: 2px solid #333;">
+                    <img src="生成特定图片.png" alt="未知鼠员" style="width: 100%; height: auto; border: 2px solid #333;">
                 </div>
                 
                 <!-- 通缉犯信息 -->
                 <div style="flex: 1;">
                     <!-- 警告框 -->
                     <div style="background-color: white; color: black; padding: 20px; margin-bottom: 30px; border: 2px solid #cc0000;">
-                        <h3 style="color: #cc0000;">警告</h3>
-                        <p>此人被认为持有武器且危险。请勿尝试自行逮捕嫌疑人。如发现此人，请立即联系当地警察局。</p>
+                        <h3 style="color: #cc0000;">⚠️ 鼠民警告 ⚠️</h3>
+                        <p>此鼠被认为持有危险物品且极度危险！鼠民们切勿尝试自行逮捕或接近，以免发生不测！</p>
+                        <p>如发现此鼠踪迹，请立即联系当地警察局或拨打报警电话！</p>
                     </div>
                     
                     <!-- 基本信息 -->
@@ -90,10 +99,10 @@
                     <div style="margin-bottom: 30px;">
                         <p><strong>姓名：</strong>未知</p>
                         <p><strong>性别：</strong>未知</p>
-                        <p><strong>血统：</strong>未知</p>
+                        <p><strong>鼠种：</strong>未知</p>
                         <p><strong>身高：</strong>未知</p>
                         <p><strong>体重：</strong>未知</p>
-                        <p><strong>头发：</strong>未知</p>
+                        <p><strong>毛发：</strong>未知</p>
                         <p><strong>眼睛：</strong>未知</p>
                         <p><strong>出生日期：</strong>未知</p>
                         <p><strong>年龄：</strong>未知</p>
@@ -102,13 +111,16 @@
                     <!-- 犯罪信息 -->
                     <h3>犯罪信息</h3>
                     <div style="margin-bottom: 30px;">
-                        <p><strong>罪行：</strong>私藏政府重要文件（数学专题八复习卷）长达54分钟</p>
-                        <p><strong>悬赏金额：</strong>100块奶酪</p>
+                        <p><strong>罪行：</strong>胆大妄为私藏政府重要文件（数学专题八复习卷）长达54分钟！</p>
+                        <p><strong>悬赏奖励：</strong>100块特级奶酪 + 鼠洞安全加固服务！</p>
+                        <p><strong>悬赏有效期：</strong>直至此鼠被捉拿归案</p>
                     </div>
                     
                     <!-- 联系方式 -->
-                    <h3>联系方式</h3>
-                    <p>如果您见过此人，请立即联系当地警察局。如需匿名举报，请拨打24小时服务热线 <span class="emergency-number">1-800-CHEESE-1</span>。</p>
+                    <h3>举报方式</h3>
+                    <p>如果您见过此鼠，请立即联系当地警察局！</p>
+                    <p>如需匿名举报，请拨打24小时服务热线 <span class="emergency-number">1-800-CHEESE-1</span>，您的线索将为小鼠帝国的安全做出重大贡献！</p>
+                    <p>所有举报信息绝对保密，不会泄露给任何鼠类/人类！</p>
                 </div>
             </div>
             
@@ -150,6 +162,42 @@
         </div>
     </footer>
 
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" id="backToTop">↑</div>
+    
+    <!-- 警灯效果 -->
+    <div class="police-light"></div>
+    
     <script src="js/script.js"></script>
+    <script>
+        // 回到顶部按钮功能
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 当前页面导航高亮
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-links > a');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('current');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -74,11 +74,18 @@
     </div>
 
     <div class="container">
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb" style="margin: 20px 0; font-size: 14px; color: #666;">
+            <a href="index.html" style="color: #003366; text-decoration: none;">首页</a> → 
+            <a href="crime.html" style="color: #003366; text-decoration: none;">犯罪信息</a> → 
+            <span style="color: #003366; font-weight: bold;">头号通缉犯</span>
+        </div>
+        
         <div class="wanted-intro">
             <h2>头号通缉犯</h2>
-            <p>小鼠帝国警务署正在寻找以下嫌疑人的下落信息。</p>
-            <p>所有嫌疑人均被视为持有武器且危险。切勿尝试自行逮捕或留住任何此类人员。</p>
-            <p>如果您见过上述任何人，请立即联系当地警察局。如需匿名举报，请拨打24小时服务热线 <span class="emergency-number">1-800-CHEESE-1</span>。您也可以通过小鼠帝国犯罪举报中心在线提交匿名线索。</p>
+            <p>小鼠帝国警务署正在寻找以下嫌疑人的下落线索，恳请各位鼠民留意！</p>
+            <p>所有嫌疑人均被视为持有武器且极度危险。鼠民们切勿尝试自行逮捕或留住任何此类鼠员，以免发生危险！</p>
+            <p>如果您见过上述任何鼠，请立即联系当地警察局。如需匿名举报，请拨打24小时服务热线 <span class="emergency-number">1-800-CHEESE-1</span>。您也可以通过小鼠帝国犯罪举报中心在线提交匿名线索，我们会为您保密！</p>
         </div>
 
         <!-- 通缉犯列表 -->
@@ -87,9 +94,9 @@
             <div class="wanted-card">
                 <a href="wanted-unknown.html" style="text-decoration: none; color: inherit;">
                     <img src="生成特定图片.png" alt="未知">
-                    <h3>未知</h3>
+                    <h3>未知鼠员</h3>
                     <p class="crime">私藏政府重要文件（数学专题八复习卷）长达54分钟</p>
-                    <p class="reward">悬赏：100块奶酪</p>
+                    <p class="reward">悬赏奶酪：100块特级奶酪 + 鼠洞安全加固服务</p>
                 </a>
             </div>
             
@@ -99,7 +106,7 @@
                     <img src="生成特定图片.png" alt="卢昱书">
                     <h3>卢昱书</h3>
                     <p class="crime">恐怖主义活动</p>
-                    <p class="reward">悬赏：500块奶酪</p>
+                    <p class="reward">悬赏奶酪：500块特级奶酪 + 终身免费奶酪保护计划</p>
                 </a>
             </div>
         </div>
@@ -146,6 +153,42 @@
         </div>
     </footer>
 
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" id="backToTop">↑</div>
+    
+    <!-- 警灯效果 -->
+    <div class="police-light"></div>
+    
     <script src="js/script.js"></script>
+    <script>
+        // 回到顶部按钮功能
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 当前页面导航高亮
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-links > a');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('current');
+            }
+        });
+    </script>
 </body>
 </html>

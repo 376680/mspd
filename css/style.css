@@ -644,3 +644,121 @@ body {
     background-color: #003366;
     color: white;
 }
+
+/* 回到顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+    background-color: #0055a5;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 按钮和链接样式 */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* 卡片hover效果 */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 链接hover效果 */
+a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 非下拉菜单链接 */
+.nav-links > a:not(.contact-btn),
+.breadcrumb a {
+    position: relative;
+    text-decoration: none;
+}
+
+/* 下划线动画 */
+.nav-links > a:not(.contact-btn)::after,
+.breadcrumb a::after,
+.content a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #003366;
+    transition: width 0.3s ease;
+}
+
+.nav-links > a:not(.contact-btn):hover::after,
+.breadcrumb a:hover::after,
+.content a:hover::after {
+    width: 100%;
+}
+
+/* 当前页面高亮 */
+.nav-links > a.current {
+    color: #003366;
+    font-weight: bold;
+}
+
+.nav-links > a.current::after {
+    width: 100%;
+}
+
+/* 警灯效果 */
+.police-light {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: police-flash 1s infinite;
+    z-index: 9999;
+}
+
+@keyframes police-flash {
+    0% { background-color: red; }
+    50% { background-color: blue; }
+    100% { background-color: red; }
+}
