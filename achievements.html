@@ -67,26 +67,26 @@
             
             <section class="achievements-section">
                 <h2>警务成果</h2>
-                <p>小鼠帝国警务署致力于维护社区安全，打击犯罪，保护鼠民生命财产安全。以下是我们近期的工作成果：</p>
+                <p>根据《帝国警务标准化条例》第45条规定，小鼠帝国警务署定期发布标准化工作成果报告。以下数据严格遵循帝国统计标准IS-STAT-2024进行采集和分析。</p>
 
                 <div class="charts-container">
                     <div class="chart-item">
-                        <h3>近期抓获犯罪嫌疑人数量</h3>
+                        <h3>帝国标准化执法行动成果统计</h3>
                         <div class="chart" id="suspectsChart"></div>
                     </div>
 
                     <div class="chart-item">
-                        <h3>找回被盗奶酪总重量</h3>
+                        <h3>帝国食品安全标准执行成果</h3>
                         <div class="chart" id="cheeseChart"></div>
                     </div>
 
                     <div class="chart-item">
-                        <h3>安全培训参与人数</h3>
+                        <h3>帝国标准化执法行动参与人数</h3>
                         <div class="chart" id="trainingChart"></div>
                     </div>
 
                     <div class="chart-item">
-                        <h3>鼠洞破坏案件下降比例</h3>
+                        <h3>帝国基础设施安全事件下降比例</h3>
                         <div class="chart" id="crimeRateChart"></div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                 <h2>资源下载</h2>
                 <div class="download-item">
                     <a href="小鼠帝国警务署武力使用政策（修订版）.pdf" class="download-btn" download>小鼠帝国警务署武力使用政策（修订版）.pdf</a>
-                    <p>提供小鼠帝国警务署武力使用政策的最新修订版，方便鼠民了解和保存。</p>
+                    <p>根据《帝国信息公开条例》第18条规定，提供小鼠帝国警务署武力使用政策最新修订版下载服务，文件格式符合帝国标准化文档规范。</p>
                 </div>
             </section>
 
@@ -129,11 +129,11 @@
             // 找回被盗奶酪总重量
             drawPieChart('cheeseChart', [35, 25, 20, 20], ['奶酪块', '奶酪片', '奶酪粉', '其他'], '重量占比');
             
-            // 安全培训参与人数
+            // 帝国标准化执法行动参与人数
             drawBarChart('trainingChart', [58, 72, 89, 65, 92], ['1月', '2月', '3月', '4月', '5月'], '人数');
             
-            // 鼠洞破坏案件下降比例
-            drawLineChart('crimeRateChart', [100, 50, 20, 5, 2], ['1月', '2月', '3月', '4月', '5月'], '案件数量');
+            // 帝国基础设施安全事件下降比例
+            drawLineChart('crimeRateChart', [100, 50, 20, 5, 2], ['1月', '2月', '3月', '4月', '5月'], '事件数量');
         }
 
         function drawBarChart(containerId, data, labels, unit) {
