@@ -3,450 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小鼠帝国警务署 - 官方网站</title>
-    <meta name="description" content="小鼠帝国警务署致力于保护鼠民安全，维护帝国秩序，提供专业的警务服务。">
+    <title>小鼠帝国警务署 - 保护和服务</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* 基础样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        
-        /* 顶部导航栏 */
-        .top-nav {
-            background-color: #0f2940;
-            color: white;
-            padding: 10px 0;
-            font-size: 14px;
-        }
-        
-        .top-nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .language-switch {
-            background: none;
-            border: 1px solid white;
-            color: white;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        
-        /* 主导航栏 */
-        .main-nav {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .main-nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-        
-        .logo img {
-            height: 60px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #0f2940;
-        }
-        
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .contact-btn {
-            background-color: #0f2940;
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 4px;
-        }
-        
-        .search-btn {
-            background: none;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        
-        /* 英雄区域 */
-        .hero {
-            background: linear-gradient(135deg, #0f2940 0%, #1a3a5a 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .hero .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-        
-        .search-box {
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 15px 50px 15px 20px;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-        }
-        
-        .search-submit {
-            position: absolute;
-            right: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #ff6b35;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        
-        /* 新闻公告 */
-        .news-section {
-            background-color: white;
-            padding: 60px 0;
-        }
-        
-        .news-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #0f2940;
-        }
-        
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .news-item {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .news-content {
-            padding: 20px;
-        }
-        
-        .news-date {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        
-        .news-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #0f2940;
-        }
-        
-        .news-excerpt {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .read-more {
-            color: #0f2940;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        /* 服务区域 */
-        .services-section {
-            background-color: #f5f5f5;
-            padding: 60px 0;
-        }
-        
-        .services-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .service-icon {
-            font-size: 48px;
-            color: #0f2940;
-            margin-bottom: 20px;
-        }
-        
-        .service-title {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #0f2940;
-        }
-        
-        .service-desc {
-            color: #666;
-        }
-        
-        /* 通缉犯区域 */
-        .most-wanted-section {
-            background-color: white;
-            padding: 60px 0;
-        }
-        
-        .most-wanted-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .wanted-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .wanted-card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .wanted-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .wanted-card a {
-            display: block;
-            text-decoration: none;
-            color: #333;
-        }
-        
-        .wanted-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .wanted-content {
-            padding: 20px;
-        }
-        
-        .wanted-card h3 {
-            margin-bottom: 10px;
-            color: #0f2940;
-        }
-        
-        .crime {
-            color: #d32f2f;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        
-        .reward {
-            color: #ff6b35;
-            font-weight: 500;
-        }
-        
-        /* 资源下载 */
-        .download-section {
-            background-color: #f5f5f5;
-            padding: 60px 0;
-        }
-        
-        .download-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .download-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .download-btn {
-            background-color: #0f2940;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        
-        /* 页脚 */
-        footer {
-            background-color: #0f2940;
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        footer .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            margin-bottom: 10px;
-            display: block;
-        }
-        
-        .footer-section a:hover {
-            color: white;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-            text-align: center;
-            color: rgba(255,255,255,0.6);
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .section-title {
-                font-size: 24px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- 顶部导航栏 -->
@@ -506,207 +65,171 @@
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
-    <section class="hero">
+    <!-- 横幅区域 -->
+    <section class="banner">
         <div class="container">
-            <h1>小鼠帝国警务署</h1>
-            <p>致力于保护鼠民安全，维护帝国秩序，提供专业的警务服务</p>
+            <h1>小鼠帝国警务署官方网站</h1>
+            <p>"保护和服务"</p>
             <div class="search-box">
-                <input type="text" class="search-input" placeholder="搜索服务、新闻或通缉犯...">
-                <button class="search-submit">搜索</button>
+                <input type="text" placeholder="请输入查询关键词：政策法规、案件编号、或卢昱书当前位置">
+                <button><i class="fas fa-search"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- 新闻公告 -->
-    <section class="news-section">
+    <!-- 内容区域 -->
+    <section class="content">
         <div class="container">
-            <h2 class="section-title">最新公告</h2>
-            <div class="news-grid">
-                <div class="news-item">
-                    <div class="news-content">
-                        <div class="news-date">2026年1月15日</div>
-                        <h3 class="news-title">关于卢昱书预警系统升级的公告</h3>
-                        <p class="news-excerpt">根据《帝国安全预警条例》第24条规定，小鼠帝国警务署将于2026年2月1日起对卢昱书预警系统进行全面升级，提升预警精度和响应速度。</p>
-                        <a href="news.html" class="read-more">阅读更多 →</a>
-                    </div>
+            <h2>欢迎来到小鼠帝国警务署官方网站</h2>
+            <p>根据《帝国警务条例》第1条规定，小鼠帝国警务署是帝国唯一合法执法机构，负责维护帝国安全与稳定。</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>最新公告</h3>
+                    <p>小鼠帝国警务署提醒所有鼠民，卢昱书预警系统已激活，系统正在向卢昱书邮箱发送位置询问邮件。根据《帝国奶酪安全条例》第47条，所有奶酪储存设施必须通过三级安全认证。</p>
+                    <ul style="margin-left: 20px; margin: 15px 0;">
+                        <li>卢昱书预警系统运行正常，已发送第9178封位置询问邮件</li>
+                        <li>帝国安全培训课程开始接受报名申请</li>
+                        <li>鼠洞结构安全评估服务暂停通知</li>
+                    </ul>
+                    <a href="news.html" style="color: #003366; text-decoration: none; font-weight: bold;">查看更多 →</a>
                 </div>
-                <div class="news-item">
-                    <div class="news-content">
-                        <div class="news-date">2026年1月10日</div>
-                        <h3 class="news-title">小鼠帝国刑法修正案发布</h3>
-                        <p class="news-excerpt">根据《帝国立法程序》第36条规定，小鼠帝国议会已通过刑法修正案，对学业侵占行为的处罚标准进行了调整。</p>
-                        <a href="news.html" class="read-more">阅读更多 →</a>
-                    </div>
+                <div class="card">
+                    <h3>热门服务</h3>
+                    <p>根据《帝国警务服务条例》第8条规定，小鼠帝国警务署为帝国居民提供标准化安全服务，包括异常行为心理分析、帝国食品安全标准认证、以及啮齿类动物紧急医疗处置程序。</p>
+                    <ul style="margin-left: 20px; margin: 15px 0;">
+                        <li>帝国标准化安全培训</li>
+                        <li>帝国食品安全标准认证</li>
+                        <li>帝国住宅安全评估</li>
+                        <li>帝国标准化巡逻服务</li>
+                    </ul>
+                    <a href="services.html" style="color: #003366; text-decoration: none; font-weight: bold;">查看更多 →</a>
                 </div>
-                <div class="news-item">
-                    <div class="news-content">
-                        <div class="news-date">2026年1月5日</div>
-                        <h3 class="news-title">皇室物品破坏案最新进展</h3>
-                        <p class="news-excerpt">小鼠帝国警务署正在全力调查皇室专属物品被破坏一案，现已锁定重要线索，悬赏丰厚奶酪奖励征集更多信息。</p>
-                        <a href="news.html" class="read-more">阅读更多 →</a>
+                <div class="card">
+                    <h3>头号通缉犯</h3>
+                    <p>根据《帝国通缉犯管理条例》第7条规定，小鼠帝国警务署现公布以下通缉人员名单，所有人员均按照《帝国安全等级分类标准》进行风险评估。</p>
+                    <ul style="margin-left: 20px; margin: 15px 0;">
+                        <li>未知人员：违反《帝国机密文件保护法》第23条</li>
+                        <li>卢昱书：违反《帝国反恐怖主义法》第34条</li>
+                    </ul>
+                    <a href="most-wanted.html" style="color: #003366; text-decoration: none; font-weight: bold;">查看更多 →</a>
+                </div>
+            </div>
+            
+            <!-- 新增板块：安全提示 -->
+            <div style="margin-top: 50px; background-color: #e8f4f8; padding: 30px; border-radius: 5px;">
+                <h3 style="color: #003366; margin-bottom: 20px;">安全提示</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div>
+                        <h4 style="margin-bottom: 10px; color: #003366;">帝国食品安全</h4>
+                        <p>按照IS-Cheese-2024标准储存食品，定期检查储存设施安全等级。</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 10px; color: #003366;">帝国住宅安全</h4>
+                        <p>按照帝国建筑标准加固入口，安装帝国标准化安全装置。</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 10px; color: #003366;">夜间安全</h4>
+                        <p>使用帝国标准化安全通道，保持帝国通信设备畅通。</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 10px; color: #003366;">卢昱书防范</h4>
+                        <p>安装帝国标准化预警系统，了解卢昱书行为模式特征。</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 服务区域 -->
-    <section class="services-section">
-        <div class="container">
-            <h2 class="section-title">我们的服务</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+            
+            <!-- 新增板块：统计数据 -->
+            <div style="margin-top: 50px;">
+                <h3 style="color: #003366; margin-bottom: 30px; text-align: center;">小鼠帝国安全统计</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h4 style="color: #003366; margin-bottom: 10px;">奶酪盗窃案</h4>
+                        <p style="font-size: 36px; font-weight: bold; color: #cc0000;">0</p>
+                        <p style="color: #666;">同比下降 100%</p>
                     </div>
-                    <h3 class="service-title">小鼠安全培训</h3>
-                    <p class="service-desc">根据《帝国安全培训条例》第12条规定，提供专业的安全防范技能培训，提升鼠民自我保护能力。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cheese"></i>
+                    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h4 style="color: #003366; margin-bottom: 10px;">鼠洞破坏案</h4>
+                        <p style="font-size: 36px; font-weight: bold; color: #cc0000;">2</p>
+                        <p style="color: #666;">同比下降 99.8%</p>
                     </div>
-                    <h3 class="service-title">奶酪保护计划</h3>
-                    <p class="service-desc">根据《帝国奶酪保护法》第8条规定，为鼠民提供奶酪储存、运输和保护的专业服务。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h4 style="color: #003366; margin-bottom: 10px;">卢昱书事件</h4>
+                        <p style="font-size: 36px; font-weight: bold; color: #cc0000;">9,178</p>
+                        <p style="color: #666;">同比上升 2560%</p>
                     </div>
-                    <h3 class="service-title">鼠洞维修服务</h3>
-                    <p class="service-desc">根据《帝国居住安全条例》第15条规定，提供专业的鼠洞检测、维修和加固服务。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-walking"></i>
+                    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <h4 style="color: #003366; margin-bottom: 10px;">成功破案</h4>
+                        <p style="font-size: 36px; font-weight: bold; color: #008000;">9,176</p>
+                        <p style="color: #666;">破案率 99.98%</p>
                     </div>
-                    <h3 class="service-title">夜间巡逻</h3>
-                    <p class="service-desc">根据《帝国治安巡逻条例》第21条规定，提供24小时不间断的社区巡逻服务，维护夜间安全。</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 通缉犯区域 -->
-    <section class="most-wanted-section">
-        <div class="container">
-            <h2 class="section-title">头号通缉犯</h2>
-            <div class="wanted-grid">
-                <div class="wanted-card">
-                    <a href="wanted-unknown.html">
-                        <img src="生成特定图片.png" alt="未知人员">
-                        <div class="wanted-content">
-                            <h3>未知人员</h3>
-                            <p class="crime">违反《帝国机密文件保护法》第23条，非法持有政府重要教育文件54分钟</p>
-                            <p class="reward">悬赏奖励：官方数学辅导一次（价值100帝国货币单位）</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="wanted-card">
-                    <a href="wanted-luyushu.html">
-                        <img src="生成特定图片.png" alt="卢昱书">
-                        <div class="wanted-content">
-                            <h3>卢昱书</h3>
-                            <p class="crime">违反《帝国反恐怖主义法》第34条，长期从事系统性恐怖袭击</p>
-                            <p class="reward">悬赏奖励：官方数学辅导一次（价值500帝国货币单位）</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="wanted-card">
-                    <a href="wanted-348.html">
-                        <img src="生成特定图片.png" alt="348号学生">
-                        <div class="wanted-content">
-                            <h3>348号学生</h3>
-                            <p class="crime">违反《帝国学业安全法》第56条，强制侵占暨妨碍执法案</p>
-                            <p class="reward">悬赏奖励：官方学业辅导一次（价值300帝国货币单位）</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="wanted-card">
-                    <a href="wanted-royal.html">
-                        <img src="生成特定图片.png" alt="皇室物品破坏者">
-                        <div class="wanted-content">
-                            <h3>皇室物品破坏者</h3>
-                            <p class="crime">违反《帝国皇室安全法》第42条，故意损坏皇室专属物品</p>
-                            <p class="reward">悬赏奖励：丰厚奶酪奖励及对应经济补偿</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 资源下载 -->
-    <section class="download-section">
-        <div class="container">
-            <h2 class="section-title">资源下载</h2>
-            <div class="download-item">
-                <a href="小鼠帝国警务署武力使用政策（修订版）.pdf" class="download-btn" download>小鼠帝国警务署武力使用政策（修订版）.pdf</a>
-                <p>根据《帝国信息公开条例》第18条规定，提供小鼠帝国警务署武力使用政策最新修订版下载服务，文件格式符合帝国标准化文档规范。</p>
-            </div>
-            <div class="download-item">
-                <a href="小鼠帝国刑法.pdf" class="download-btn" download>小鼠帝国刑法.pdf</a>
-                <p>根据《帝国信息公开条例》第18条规定，提供小鼠帝国刑法下载服务，文件格式符合帝国标准化文档规范。</p>
-            </div>
-            <div class="download-item">
-                <a href="小鼠帝国兴鼠党道德行为规范.pdf" class="download-btn" download>小鼠帝国兴鼠党道德行为规范.pdf</a>
-                <p>根据《帝国信息公开条例》第18条规定，提供小鼠帝国兴鼠党道德行为规范下载服务，文件格式符合帝国标准化文档规范。</p>
             </div>
         </div>
     </section>
 
     <!-- 页脚 -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>小鼠帝国警务署</h3>
-                    <p>地址：小鼠帝国中心区域 123 号</p>
-                    <p>电话：1-800-CHEESE-1</p>
-                    <p>邮箱：info@mousepd.gov</p>
-                </div>
-                <div class="footer-section">
-                    <h3>快速链接</h3>
-                    <a href="services.html">获取服务</a>
-                    <a href="crime.html">犯罪信息</a>
-                    <a href="intervention.html">介入</a>
-                    <a href="news.html">消息</a>
-                    <a href="achievements.html">警务成果</a>
-                </div>
-                <div class="footer-section">
-                    <h3>法律信息</h3>
-                    <a href="">隐私政策</a>
-                    <a href="">使用条款</a>
-                    <a href="">信息公开</a>
-                    <a href="">网站地图</a>
-                </div>
+            <div>
+                <h3>小鼠帝国警务署</h3>
+                <p>地址：小鼠帝国中心区域 123 号</p>
+                <p>电话：1-800-CHEESE-1</p>
+                <p>邮箱：info@mousepd.gov</p>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 小鼠帝国警务署 版权所有 | 根据《帝国版权保护法》第12条规定</p>
+            <div>
+                <h3>快速链接</h3>
+                <p><a href="services.html">获取服务</a></p>
+                <p><a href="crime.html">犯罪信息</a></p>
+                <p><a href="intervention.html">介入</a></p>
+                <p><a href="news.html">消息</a></p>
+            </div>
+            <div>
+                <h3>重要资源</h3>
+                <p><a href="most-wanted.html">头号通缉犯</a></p>
+                <p><a href="contact.html">联系我们</a></p>
+                <p><a href="services.html">奶酪保护计划</a></p>
+                <p><a href="services.html">卢昱书预警系统</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>除另有说明外，所有内容均根据开放政府许可协议v3.0（<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" style="color: white; text-decoration: underline;">https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/</a>）提供。</p>
             </div>
         </div>
     </footer>
 
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" id="backToTop">↑</div>
+    <script src="js/script.js"></script>
     <script>
-        // 导航菜单交互
-        document.addEventListener('DOMContentLoaded', function() {
-            // 搜索功能
-            const searchInput = document.querySelector('.search-input');
-            const searchSubmit = document.querySelector('.search-submit');
-            
-            searchSubmit.addEventListener('click', function() {
-                const query = searchInput.value.trim();
-                if (query) {
-                    alert('搜索功能正在建设中，感谢您的理解！');
-                }
+        // 回到顶部按钮功能
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
-            
-            // 语言切换
-            const languageSwitch = document.querySelector('.language-switch');
-            languageSwitch.addEventListener('click', function() {
-                alert('英文版本正在翻译中，感谢您的耐心等待！');
-            });
+        });
+        
+        // 当前页面导航高亮
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-links > a');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('current');
+            }
         });
     </script>
 </body>
