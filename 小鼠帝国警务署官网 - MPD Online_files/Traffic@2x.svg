@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D533AEA2-8312-4E94-AA31-45BDA71414A4@2x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="287"></rect>
+        <filter x="-9.0%" y="-38.3%" width="118.1%" height="190.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="40" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Desktop-(For-Dev)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DEV-|-LAPDOnline-|-Dropdown" transform="translate(-335.000000, -341.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="750"></rect>
+            <g id="Header" transform="translate(135.000000, 288.000000)" fill="#0F212B" font-family="PublicSans-Bold, Public Sans" font-size="62" font-weight="bold" letter-spacing="-1.14814815" line-spacing="68">
+                <text id="To-protect-and-to-se">
+                    <tspan x="0" y="98">To protect and to serve.</tspan>
+                </text>
+            </g>
+            <g id="Dropdown" transform="translate(0.000000, 218.000000)">
+                <g id="DropdownBG">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Big-Links" transform="translate(335.000000, 51.000000)" fill="#E73F15">
+                    <g id="File-Traffic-Orange" transform="translate(0.000000, 72.000000)">
+                        <path d="M24.0950646,2 C24.4917326,2 24.8412081,2.2511295 24.9753869,2.61997093 L25.0065169,2.72338229 L32.774,35 L36.0767583,35 C36.5866506,35 37,35.4477153 37,36 C37,36.5128358 36.6435916,36.9355072 36.1844278,36.9932723 L36.0767583,37 L3.92324169,37 C3.41334938,37 3,36.5522847 3,36 C3,35.4871642 3.3564084,35.0644928 3.8155722,35.0067277 L3.92324169,35 L7.236,35 L15.4171362,2.71227974 C15.5144718,2.32809844 15.8368664,2.04973669 16.2199791,2.00601099 L16.3258463,2 L24.0950646,2 Z M28.677,26 L11.453,26 L9.172,35 L30.843,35 L28.677,26 Z M26.03,15 L14.24,15 L11.959,24 L28.196,24 L26.03,15 Z M23.3572315,3.89355775 L17.0541084,3.89355775 L14.746,13 L25.549,13 L23.3572315,3.89355775 Z" id="icon-filetraffic-orange"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

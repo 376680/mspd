@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B69C541B-5E6E-4BA5-8B52-F96317F189B9@2x</title>
+    <g id="Desktop-(For-Dev)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DEV-|-LAPDOnline-|-Homepage-|-Events-Tab" transform="translate(-965.000000, -2156.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="3334"></rect>
+            <g id="3-Boxes" transform="translate(135.000000, 1934.000000)">
+                <g id="Contact-Box" transform="translate(800.000000, 0.000000)">
+                    <rect id="BlueBG" fill="#052942" transform="translate(185.000000, 153.000000) scale(-1, 1) translate(-185.000000, -153.000000) " x="0" y="0" width="370" height="306"></rect>
+                    <g id="icon-email" transform="translate(30.000000, 222.000000)" fill="#7DDFFF">
+                        <path d="M21.5,5 L21.5,19 L2.5,19 L2.5,5 L21.5,5 Z M19.899,10.042 L12.0072937,14.0974732 L4.099,10.152 L4.1,17.4 L19.9,17.4 L19.899,10.042 Z M19.9,6.6 L4.1,6.6 L4.099,8.364 L11.9966784,12.3041499 L19.899,8.244 L19.9,6.6 Z" id="Icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

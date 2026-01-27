@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 23" width="32" height="23">
+	<title>1024px-YouTube_dark_icon_(2017)</title>
+	<defs>
+		<image  width="32" height="23" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAMAAABd273TAAAAAXNSR0IB2cksfwAAAWhQTFRFAAAACgoKJiYmKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKSkpKCgoKSkpJycnHBwcAgICDg4OKCgoKSkpKCgoKSkpHR0dGRkZJSUlJiYmGRkZJycnJSUlJycnJycnJycnJiYmIyMjJycnKCgoNzc3Q0NDHR0dJCQkJycnIiIiT09P6enpjo6OLi4uKCgoKCgoS0tL/v7+////1dXVampqICAgKCgo+fn5t7e3KCgo8/PzmJiYOjo6wMDAJSUl9vb2np6ePj4+Jycnvb29/f392dnZcHBwHx8fKCgo7OzslZWVMjIyHBwcODg4SEhIHh4eKCgoJycnKCgoJycnJiYmJiYmKSkpHBwcJSUlJiYmGBgYDw8PKSkpKSkpHBwcJiYmKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoJiYmGxsbkn25BAAAAHh0Uk5TAAAKUHyYrLvI0trh5urt78Cvmn5WEwAAKMn//9pDC8roIFB7hrGm///Svv/////Q///////x3f////////D//+z//////////////////9D/////////6afRh7JSgAzO7iUrzONNC1F/rbzu6+fi1czBs6GJYhsAyl1k+AAAAQ1JREFUeJx90lVXw0AQBeBbtJKkUKSQxS1FUhIoLQuU4u7u7u78feCFTDYnO2+z99tzducMEMjLLygsKg6GwhFF1aJRTVUi4VCwpDRWVl5RCcSrqnXmVzW1QF29f870hkY0SfJf0YwWWc5YK9pIZyQ8oB0dJO/sMpMCUNHtNJbd05syDRfoQ5qATD8fGLSGKMhCoWCYc57LmAkKRkTAR8fGDQKyHsD5RGrSAZoHTE3PzMreMGebFn2D6xfzfGExueTc/wPLBNgrq2vr4hzoJDc2t8RJbmOHdIbFxNrFnufMVfs4kOb6IY6OZRt1cor42bk/uLgEELi6vond3v1v9f3D41P6+eX17f3j8+sbP0+uYgnEKPAFAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+</svg>
